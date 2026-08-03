@@ -171,31 +171,175 @@ console.log(value);
 
 // =================== Comparison Operators ===================
 
+// Defination:    Comparison Operators are used to compare two values. They always return a Boolean value (true or false).
+
 // use to compare two values. 
 
 // | Operator | Meaning            | Example       |
 // | -------- | ------------------ | ------------- |
-// | `==`     | Loose Equal        | `10 == "10"`  |
-// | `===`    | Strict Equal       | `10 === "10"` |
-// | `!=`     | Loose Not Equal    | `10 != "10"`  |
-// | `!==`    | Strict Not Equal   | `10 !== "10"` |
-// | `>`      | Greater Than       | `20 > 10`     |
-// | `<`      | Less Than          | `20 < 10`     |
-// | `>=`     | Greater Than Equal | `20 >= 20`    |
-// | `<=`     | Less Than Equal    | `20 <= 20`    |
+// |  ==      | Loose Equal        |  10 == "10"   |
+// |  ===     | Strict Equal       |  10 === "10"  |
+// |  !=      | Loose Not Equal    |  10 != "10"   |
+// |  !==     | Strict Not Equal   |  10 !== "10"  |
+// |  >       | Greater Than       |  20 > 10      |
+// |  <       | Less Than          |  20 < 10      |
+// |  >=      | Greater Than Equal |  20 >= 20     |
+// |  <=      | Less Than Equal    |  20 <= 20     |
+
+
+// 1. Loose Equal (==)
+
+// Definition:       The == operator compares two values after performing type conversion if necessary.
+//  Checks if the values are equal (allows type conversion).
+
+
+// eg:
+console.log(10 == 10);                         // it return true, both are number here.
+
+console.log("10" == 10);             // it return true, because here "10" is string and 10 is number but JavaScript automatically converts "10" in to 10.
+
+
+// 2. Strict Equal (===)
+
+// Definition:   The === operator compares both the value and the data type.
+
+// Checks if both the value and data type are equal
+
+// eg:
+
+console.log(10 === 10);                        // it return True because here both are same data tpe and value.
+
+console.log("10" === 10);                     // it return False because here "10" is string and 10 is number so it dose't match the data type here.
+
+
+// 3. Loose Not Equal (!=)
+
+// Definition:    The != operator checks whether two values are not equal after performing type conversion.
+
+// Checks if the values are not equal (allows type conversion)
+
+// eg: 
+console.log(10 != 20);                       // it return true . both are number here.
+console.log("10" != 10);                     // it return False because , javascript change the data type string to number and both number are same so it return false.
+
+
+// 4. Strict Not Equal (!==)
+
+// Definition:   The !== operator checks both value and data type.
+
+// Checks if the value or data type is different
+
+// eg:
+
+console.log("10" !== 10);                      // it return True because it also check data type and value . so data type is not same here.
+
+
+// 5. Greater Than (>)
+
+// Checks if the left value is greater than the right value
+
+console.log(20 > 10);                           // it return True because 20 is grater than 10.
+
+
+// 6. Less than (<)
+
+// Checks if the left value is less than the right value
+
+console.log(5 < 2);                             // it return False because 5 is not less than 2.
+
+
+// 7. Greater Than or Equal (>=)
+
+// Checks if the left value is greater than or equal to the right value
+
+console.log(18 >= 18);                         // it return True because 18 is Greater Than or Equal to 18.
+
+
+// 8. Less Than or Equal (<=)
+
+// Checks if the left value is less than or equal to the right value
+
+console.log(10 <= 15);                          // it return true because 10 is Less Than or Equal to 15.
 
 
 
 
 // =================== Logical Operators  ===================
 
+// Logical Operators are used to combine or reverse Boolean expressions. They always return a Boolean value (true or false) when used with comparison expressions.
+
 // Use  with Boolean values.
 
 // | Operator | Name | Example           |
 // | -------- | ---- | ----------------- |
-// | `&&`     | AND  | `true && false`   |
-// | `\|\|`   | OR   | `true \|\| false` |
-// | `!`      | NOT  | `!true`           |
+// |  &&      | AND  |  true && false    |
+// |  ||      | OR   |  true || false    |
+// |  !       | NOT  |  !true            |
+
+// 1. Logical AND (&&)
+
+// Definition:    The Logical AND (&&) operator returns true only if all conditions are true. Otherwise, it returns false.
+
+// Logical AND (&&) TRUTH TABLE
+
+// | Condition 1 | Condition 2 | Result |
+// | ----------- | ----------- | ------ |
+// | true        | true        | true   |
+// | true        | false       | false  |
+// | false       | true        | false  |
+// | false       | false       | false  |
+
+// eg: 
+console.log(true && true);                   // it return True , because both are True.
+console.log(true && false);                 // it return False , because one condition is true.
+
+// Real project Example 
+let emailCorrect= true;
+let passwordCorrect = true;
+console.log(emailCorrect && passwordCorrect);              // it return True , because both email and password is true.
+
+
+// 2. Logical OR (||)
+
+// Definition:   The Logical OR (||) operator returns true if at least one condition is true. It returns false only when all conditions are false.
+
+// Logical OR Truth Table 
+
+// | Condition 1 | Condition 2 | Result |
+// | ----------- | ----------- | ------ |
+// | true        | true        | true   |
+// | true        | false       | true   |
+// | false       | true        | true   |
+// | false       | false       | false  |
+
+// Real project Example 
+let emailVerified = false; 
+let phoneVerified = true;
+console .log(emailVerified || phoneVerified);                          //  Checks whether the user has verified either their email or phone number.
+
+
+// 3. Logical NOT (!)
+
+// Definition:     The Logical NOT (!) operator reverses a Boolean value.
+
+// Logical NOT Truth table 
+
+// | Original | Result |
+// | -------- | ------ |
+// | true     | false  |
+// | false    | true   |
+
+// eg:
+console.log(!true);                          // it print False becaue Logical NOt reverse the result.
+console.log(!false);                         // it print True.
+
+
+// Real project Example
+
+let isLogfedIn = false;
+console.log(!isLogfedIn);                   // it print True . we use to check is user is login in or not, if user is login then show logout button or if user is logout then show login button/page/
+
+
 
 
 // =================== Unary Operators ===================
@@ -204,8 +348,8 @@ console.log(value);
 
 // | Operator | Name      | Example      |
 // | -------- | --------- | ------------ |
-// | `++`     | Increment | `x++`, `++x` |
-// | `--`     | Decrement | `x--`, `--x` |
+// |  ++      | Increment |  x++ ,  ++x  |
+// |  --      | Decrement |  x-- ,  --x  |
 
 
 
@@ -214,9 +358,12 @@ console.log(value);
 
 // | Operator | Syntax                               |
 // | -------- | ------------------------------------ |
-// | `? :`    | `condition ? trueValue : falseValue` |
+// |  ? :     |  condition ? trueValue : falseValue  |
  
 // eg: /
-let age11 = 20;
+let age11 = 18;
 let result = age11 >= 18 ? "Adult" : "Minor";
-console.log("Result = ", result)
+console.log("Result = ", result);
+
+// can you learn read it fast and aproprite and meke it.
+
