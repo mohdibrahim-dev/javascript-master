@@ -336,15 +336,21 @@ console.log(!false);                         // it print True.
 
 // Real project Example
 
-let isLogfedIn = false;
-console.log(!isLogfedIn);                   // it print True . we use to check is user is login in or not, if user is login then show logout button or if user is logout then show login button/page/
+let isLoggedIn = false;
+console.log(!isLoggedIn);                   // it print True . we use to check is user is login in or not, if user is login then show logout button or if user is logout then show login button/page/
 
 
 
 
 // =================== Unary Operators ===================
 
-// work on only one operand
+// A unary Operator is an operator that works on only one operand.
+
+// Unary Operator is work on only single Operand 
+// eg:
+let x = 12;
+x++;
+console.log(x);            // it return 13. because x++ can increase by 1 . 
 
 // | Operator | Name      | Example      |
 // | -------- | --------- | ------------ |
@@ -352,9 +358,73 @@ console.log(!isLogfedIn);                   // it print True . we use to check i
 // |  --      | Decrement |  x-- ,  --x  |
 
 
+// 1. Increment Operator (++)
+
+// Defination : The increment Operator (++) increase the value of a variable by 1.
+
+// eg: 
+// variable++;
+// ++variable;
+
+let count = 5;
+count++;
+console.log("count = ", count);                      //it return 6.       
+
+// 2. Decrement Operator (--)
+
+// Defination:   the Decrement Operator (--) decreses the value of a variable by 1.
+
+// eg: 
+let lives = 5;
+lives--
+console.log("Lives = ", lives);
+
+
+
+// 3. Pre Increment (++x)
+
+// Pre Increment increse the value first, then returns the updated value.
+
+// syntax: ++x; 
+
+// eg: 
+let y = 5;
+console.log("++y = ",++y);                     // it print 6 . 
+
+
+// 4/ Post Decrement (x--)
+
+// Definition:    Post Decrement returns the current value first, then decreases the value by 1.
+
+// syntax: x--;
+
+let x1 = 5;
+console.log("x1-- = ", x1--);                  // it return 5.  
+
+console.log("x1 value after post decrement of x1 =" ,x1)               // it return  4.
+
+
+// 5. pre Decrement (--x)
+
+// Definition:    Pre Decrement decreases the value first, then returns the updated value.
+
+// eg: 
+let x2 = 5;
+console.log(--x2);
+
 
 
 // ===================  Ternary Operator ===================
+
+
+//  The Ternary Operator is a shorthand way of writing an if...else statement. It checks a condition and returns one value if the condition is true, and another value if the condition is false.
+
+// Ternary Operator is short form of if...else.
+
+// syntax: consition ? valueIfTrue : valueIfFalse;
+
+// syntax breakdown : `condition` -> check the condition , if it is true -> return `valueIfTrue` otherwise return -> `valueIfFalse`;
+
 
 // | Operator | Syntax                               |
 // | -------- | ------------------------------------ |
@@ -363,7 +433,47 @@ console.log(!isLogfedIn);                   // it print True . we use to check i
 // eg: /
 let age11 = 18;
 let result = age11 >= 18 ? "Adult" : "Minor";
-console.log("Result = ", result);
+console.log( "Yor age is = ", result);
 
-// can you learn read it fast and aproprite and meke it.
+// eg with if else reference : 
 
+// Ternary Operator
+
+let marks1 = 25;
+let result1 = marks1 >= 33 ? "pass" : "Fail";
+console.log(result1);
+
+// if...else
+
+let mark_s = 25;
+let resul_t;
+if (mark_s >= 33){
+    resul_t = "Pass";
+} else {
+    result = "Fail";
+}
+console.log(result);                 // Fail
+
+
+// 1. Real world Examples 
+
+let isLogged_In = true;
+let message = isLogged_In ? "Welcome" : "Please Login";
+console.log(message);               // result is Welcome.
+
+// 2. Real world Examples 
+
+let amount = 6000;
+let discount = amount >= 5000 ? "10% Discount" : "No Discount";
+console.log(discount);              // 10% Discount.
+
+// 3. Real world Examples
+
+let isPremium = true;
+let amount1 = 4000;
+
+let message1 = isPremium && amount1 >= 3000
+    ? "Free Delivery"
+    : "Delivery Charges Apply";
+
+console.log(message1);
