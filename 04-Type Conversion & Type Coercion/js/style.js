@@ -100,3 +100,21 @@ console.log(typeof Result);            // Check the type of generated result.
 
 
 // 2. With operators like `-`, `*`, and `/`, JavaScript generally converts the string into a number.
+
+
+
+
+
+// Summary Table
+
+// | Expression      | Output   | Why?                |
+// | --------------- | -------- | ------------------- |
+// | `"10" + 20`     | `"1020"` | `+` concatenates    |
+// | `"10" - 20`     | `-10`    | String → Number     |
+// | `"5" * "2"`     | `10`     | String → Number     |
+// | `"20" / "5"`    | `4`      | String → Number     |
+// | `"10" % 3`      | `1`      | String → Number     |
+// | `true + 1`      | `2`      | `true` → `1`        |
+// | `false + 1`     | `1`      | `false` → `0`       |
+// | `null + 1`      | `1`      | `null` → `0`        |
+// | `undefined + 1` | `NaN`    | `undefined` → `NaN` |
