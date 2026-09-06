@@ -111,3 +111,38 @@ switch (role) {
   default:
     console.log("Access denied.")
 }
+
+// 2. Menu Selection
+
+let choice = 2;
+switch (choice) {
+  case 1:
+    console.log("Pizza selected");
+    break;
+  case 2:
+    console.log("Burger selected");
+    break;
+  default:
+    console.log("invalid choice");
+}
+
+
+console.log("day4")
+
+let day4 = "Sunday";
+
+switch (day4) {
+case "Saturday":
+case "Sunday":
+console.log("Weekend");
+break;
+
+case "Monday":
+case "Tuesday":
+case "Wednesday":
+case "Thrusday":
+case "Friday":
+console.log("Weekday");
+default: 
+console.log("Invalid day4")
+}
